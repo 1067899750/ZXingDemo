@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <!-- //调用相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- //震动（用不到震动可以去掉） -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- //闪光灯（如不用闪光灯可以去掉） -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ScanActivity" />
+        <activity android:name=".activity.CreateActivity" />
+        <activity android:name=".activity.CreateBarActivity"></activity>
+    </application>
+
+</manifest>
